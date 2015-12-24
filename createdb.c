@@ -24,7 +24,7 @@ int main(int argc, char **argv)
     printf("\nEnter the name of a database : \n");
     scanf("%s",strDBName);
     strcat(strQuery,strDBName);
-    printf("\n Query is -> : %s \n",strQuery);
+   // printf("\n Query is -> : %s \n",strQuery); 
     
     if (mysql_query(con, strQuery))
     {
@@ -32,6 +32,6 @@ int main(int argc, char **argv)
             mysql_close(con);
             exit(0);
     }
-        mysql_close(con);
-        exit(1);
+    mysql_close(con);
+    exit(1);
 }
