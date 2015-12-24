@@ -2,7 +2,7 @@
 #include <mysql.h>
 #include <string.h>
 
-int main(int argc, char **argv)
+int main(int argc, char **argv) // main function
 {
     char strDBName[100];
     MYSQL *con = mysql_init(NULL);
