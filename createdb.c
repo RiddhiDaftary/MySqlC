@@ -33,6 +33,6 @@ int main(int argc, char **argv)
             exit(1);
     }
         mysql_close(con);
-        exit(0);
+        exit(1);
 }
 
