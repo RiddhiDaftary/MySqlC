@@ -2,6 +2,7 @@
 #include <mysql.h>
 #include <string.h>
 
+<<<<<<< HEAD
 void finish_with_error(MYSQL *con)
 {
   fprintf(stderr, "%s\n", mysql_error(con));
@@ -10,6 +11,9 @@ void finish_with_error(MYSQL *con)
 }
 
 int main(int argc, char **argv)
+=======
+int main(int argc, char **argv) // main function
+>>>>>>> cb2e8dc0cd22f093948095c2b7c54f760b957bfd
 {
     char strDBName[100];
     MYSQL *con = mysql_init(NULL);
@@ -31,7 +35,7 @@ int main(int argc, char **argv)
     printf("\nEnter the name of a database : \n");
     scanf("%s",strDBName);
     strcat(strQuery,strDBName);
-    printf("\n Query is -> : %s \n",strQuery);
+   // printf("\n Query is -> : %s \n",strQuery); 
     
     if (mysql_query(con, strQuery))
     {
@@ -39,6 +43,6 @@ int main(int argc, char **argv)
             mysql_close(con);
             exit(0);
     }
-        mysql_close(con);
-        exit(1);
+    mysql_close(con);
+    exit(1);
 }
