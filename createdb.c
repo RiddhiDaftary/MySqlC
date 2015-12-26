@@ -2,7 +2,22 @@
 #include <mysql.h>
 #include <string.h>
 
-int main(int argc, char *argv[]) // main function
+//<<<<<<< HEAD
+//int main(int argc, char *argv[]) // main function
+//=======
+//<<<<<<< HEAD
+void finish_with_error(MYSQL *con)
+{
+  fprintf(stderr, "%s\n", mysql_error(con));
+  mysql_close(con);
+  exit(1);        
+}
+
+//int main(int argc, char **argv)
+//=======
+int main(int argc, char **argv) // main function
+//>>>>>>> cb2e8dc0cd22f093948095c2b7c54f760b957bfd
+//>>>>>>> 1421aec87ddc2a17b11050b631597ed7ceb5d9eb
 {
     char strDBName[100];
     MYSQL *con = mysql_init(NULL);
